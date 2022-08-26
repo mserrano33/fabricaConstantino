@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using fabricadeSandwiches.BD.Data.Entidad;
+using fabricaConstantino.BD.Data.Entidad;
 
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace fabricadeSandwiches.BD.Data
+namespace fabricaConstantino.BD.Data
 {
     public class Bdcontext :DbContext
     {

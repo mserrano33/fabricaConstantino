@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace fabricadeSandwiches.BD.Data.Entidad
+namespace fabricaConstantino.BD.Data.Entidad
 {   
     
     public class Producto
