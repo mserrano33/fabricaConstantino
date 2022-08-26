@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fabricaConstantino.Server", "fabricaConstantino\Server\fabricaConstantino.Server.csproj", "{005A4755-362E-4AB5-B0EE-E498D716B4A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "fabricaConstantino.Server", "fabricaConstantino\Server\fabricaConstantino.Server.csproj", "{005A4755-362E-4AB5-B0EE-E498D716B4A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fabricaConstantino.Client", "fabricaConstantino\Client\fabricaConstantino.Client.csproj", "{7414484A-8F60-4A91-BC89-F975165D2569}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fabricaConstantino.Shared", "fabricaConstantino\Shared\fabricaConstantino.Shared.csproj", "{9D2755FE-A451-4F50-8557-1F741224BF5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "fabricaConstantino.Shared", "fabricaConstantino\Shared\fabricaConstantino.Shared.csproj", "{9D2755FE-A451-4F50-8557-1F741224BF5A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "fabricaConstantino.BD", "fabricaConstantino\fabricaConstantino.BD\fabricaConstantino.BD.csproj", "{8851D53C-3536-476A-9CB7-78232D7D6086}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "fabricaConstantino.Client", "fabricaConstantino\Client\fabricaConstantino.Client.csproj", "{306E8F2B-91ED-4885-9767-B1A414D8D8BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +21,6 @@ Global
 		{005A4755-362E-4AB5-B0EE-E498D716B4A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{005A4755-362E-4AB5-B0EE-E498D716B4A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{005A4755-362E-4AB5-B0EE-E498D716B4A3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7414484A-8F60-4A91-BC89-F975165D2569}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7414484A-8F60-4A91-BC89-F975165D2569}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7414484A-8F60-4A91-BC89-F975165D2569}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7414484A-8F60-4A91-BC89-F975165D2569}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9D2755FE-A451-4F50-8557-1F741224BF5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9D2755FE-A451-4F50-8557-1F741224BF5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D2755FE-A451-4F50-8557-1F741224BF5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{8851D53C-3536-476A-9CB7-78232D7D6086}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8851D53C-3536-476A-9CB7-78232D7D6086}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8851D53C-3536-476A-9CB7-78232D7D6086}.Release|Any CPU.Build.0 = Release|Any CPU
+		{306E8F2B-91ED-4885-9767-B1A414D8D8BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{306E8F2B-91ED-4885-9767-B1A414D8D8BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{306E8F2B-91ED-4885-9767-B1A414D8D8BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{306E8F2B-91ED-4885-9767-B1A414D8D8BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
