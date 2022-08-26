@@ -65,12 +65,12 @@ a, .btn-link {
         content: "An error has occurred."
     }
 body {
-    background-image: url("/mapa.png");
+    background-image: url("/fotoentrada.png");
     opacity: 1;
-    
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    background-attachment: fixed;
 }
 
 
