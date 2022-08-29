@@ -1,14 +1,12 @@
 ﻿
 html {
     background-color: black;
-    
 }
 
 
 * {
     box-sizing: border-box;
     font-family: sans-serif;
-    
 }
 
 .login {

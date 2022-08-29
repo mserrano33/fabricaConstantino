@@ -1,4 +1,4 @@
-@page "/chatbot"
+
 import re
 import random
 
