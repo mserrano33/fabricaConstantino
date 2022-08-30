@@ -66,6 +66,7 @@ a, .btn-link {
     }
 body {
     background-image: url("/fotoentrada.png");
+    background-attachment: fixed;
     opacity: 1;
     background-size: cover;
     background-repeat: no-repeat;
