@@ -75,13 +75,16 @@ body {
 }
 
 
-h5 {
+h6 {
     font-family: 'Comic Sans MS';
-    font-size: 190%;
+    font-size: 160%;
     
 }
 
-
+h5 {
+    font-family: 'arial';
+    font-size: 100%;
+}
 
 
 
