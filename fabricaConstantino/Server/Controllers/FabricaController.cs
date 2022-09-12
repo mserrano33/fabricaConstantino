@@ -1,5 +1,5 @@
-﻿using fabricadeSandwiches.BD.Data;
-using fabricadeSandwiches.BD.Data.Entidad;
+﻿using fabricaConstantino.BD.Data;
+using fabricaConstantino.BD.Data.Entidad;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
