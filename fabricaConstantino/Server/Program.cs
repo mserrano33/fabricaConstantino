@@ -2,15 +2,17 @@ using fabricaConstantino.BD.Data;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
+// Add services to the container.//cuando yo estoy configurando el jason tenga la oocion de ignorar los ciclos: que ignore la recurvicidad
+builder.Services.AddControllersWithViews().AddJsonOptions(
+    x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
-var conn = builder.Configuration.GetConnectionString("conn");
 
+var conn = builder.Configuration.GetConnectionString("conn");
 builder.Services.AddDbContext<Bdcontext>(opciones =>
 opciones.UseSqlServer(conn));
 builder.Services.AddSwaggerGen(c =>

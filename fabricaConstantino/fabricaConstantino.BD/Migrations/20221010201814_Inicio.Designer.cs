@@ -11,14 +11,14 @@ using fabricaConstantino.BD.Data;
 namespace fabricaConstantino.BD.Migrations
 {
     [DbContext(typeof(Bdcontext))]
-    [Migration("20220826083057_Inicio")]
+    [Migration("20221010201814_Inicio")]
     partial class Inicio
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.8")
+                .HasAnnotation("ProductVersion", "6.0.9")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
