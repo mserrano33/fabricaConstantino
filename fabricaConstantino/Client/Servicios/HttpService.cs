@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using fabricaConstantino.Client.Servicios;
+using System.Globalization;
 using System.Text;
 using System.Text.Json;
 
@@ -13,12 +14,12 @@ namespace fabrica constantino.Client.Servicios
             this.http = http;
         }
 
-        public async Task<HttpRespuesta<T>> Get<T>(string url)
+        public async Task<fabricaConstantino.Client.Servicios.HttpRespuesta<T>> Get<T>(string url)
         {
             var response = await http.GetAsync(url);
             if (response.IsSuccessStatusCode)
             {
-                var respuesta = await DeserializarRepuesta<T>(response);
+                var respuesta = await DeserializarRepuesta<T>(response, JsonSerializer);
                 return new HttpRespuesta<T>(respuesta, false, response);
             }
             else
@@ -69,10 +70,11 @@ namespace fabrica constantino.Client.Servicios
                                       respuesta);
         }
 
-        private async Task<T> DeserializarRepuesta<T>(HttpResponseMessage response)
+        private async Task<T> DeserializarRepuesta<T>(HttpResponseMessage response, JsonSerializer jsonSerializer)
         {
             var respuestaStr = await response.Content.ReadAsStringAsync();
-            return JsonSerializer.Deserialize<T>(respuestaStr,
+            return jsonSerializer.Deserialize<T>(
+                respuestaStr,
                 new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
         }
     }
