@@ -1,0 +1,101 @@
+﻿<h3>Lista de Productos</h3>
+
+<a class="btn btn-primary" href="Productos/Crear">Nueva Producto</a>
+
+<table>
+    <tr>
+        <th>Código</th>
+        <th>producto</th>
+    </tr>
+
+    @if (producto == null)
+    {
+        <tr>Cargando.......</tr>
+    }
+    else if (producto.Count == 0)
+    {
+        <tr>No existen datos</tr>
+    }
+    else
+    {
+        @foreach (var item in producto)
+        {
+            <tr>
+                <td>@item.Codigo</td>
+                <td>@item.NomEspecialidad</td>
+                <td>
+                    <a class="btn btn-primary"
+               href="Especialidades/Editar/@item.Id">
+                        Editar
+                    </a>
+                </td>
+                <td>
+                    <button class="btn btn-warning"
+                    @onclick="()=>Eliminar(item)">
+                        Borrar
+                    </button>
+                </td>
+            </tr>
+        }
+    }
+</table>
+
+<Confirmacion @ref="confirmacion"
+              verCancelar="true"
+              verOk="true"
+              textOk="Ok"
+              Titulo="Borrar especialidad"
+              onCancel="Cancelar"
+              onConfirm="Borrar">
+    <div>
+        Está por borrar la especialidad @ProductosBorrar.NomEspecialidad
+        <br />
+        ¿Está seguro que desea continuar?
+    </div>
+</Confirmacion>
+
+
+@code {
+    List<fabricaConstantino.BD.Data.Entidad.Producto> producto;
+    Confirmacion confirmacion;
+    Producto ProductoBorrar;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        await Leer();
+    }
+
+    private async Task Leer()
+    {
+        var respuesta = await http.Get<List<fabricaConstantino.BD.Data.Entidades.Especialidad>>("api/Productos");
+        if (!respuesta.Error)
+        {
+            Producto = respuesta.Respuesta;
+        }
+    }
+
+    private void Eliminar(Producto productoBorrar)
+    {
+        ProductoBorrar = productoBorrar;
+        confirmacion.Ver();
+    }
+
+    private void Cancelar()
+    {
+        confirmacion.Ocultar();
+        ProductoBorrar = null;
+    }
+
+    private async Task Borrar()
+    {
+        var respuesta = await http.Delete($"api/Productos/{ProductoBorrar.Id}");
+        if (respuesta.Error)
+        {
+            var body = "Error";
+        }
+        Cancelar();
+        await Leer();
+    }
+}

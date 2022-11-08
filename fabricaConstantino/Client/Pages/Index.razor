@@ -77,7 +77,10 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar a pedido</a></div>
+                            <p role="status">Cantidad pedida: @currentCount</p>
+
+                            
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" @onclick="IncrementCount">Agregar a pedido</a></div>
                             </div>
                         </div>
                     </div>
@@ -107,7 +110,8 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar a pedido</a></div>
+                                <p role="status">Cantidad pedida: @currentCount</p
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#"@onclick="IncrementCount">Agregar a pedido</a></div>
                             </div>
                         </div>
                     </div>
@@ -129,7 +133,8 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar a pedido</a></div>
+                                <p role="status">Cantidad pedida: @currentCount</p
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#"@onclick="IncrementCount">Agregar a pedido</a></div>
                             </div>
                         </div>
                     </div>
@@ -148,7 +153,8 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar a pedido</a></div>
+                                <p role="status">Cantidad pedida: @currentCount</p
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#"@onclick="IncrementCount">Agregar a pedido</a></div>
                             </div>
                         </div>
                     </div>
@@ -170,7 +176,8 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar a pedido</a></div>
+                                <p role="status">Cantidad pedida: @currentCount</p
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#"@onclick="IncrementCount">Agregar a pedido</a></div>
                             </div>
                         </div>
                     </div>
@@ -189,7 +196,8 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar a pedido</a></div>
+                                <p role="status">Cantidad pedida: @currentCount</p
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#"@onclick="IncrementCount">Agregar a pedido</a></div>
                             </div>
                         </div>
                     </div>
@@ -219,7 +227,8 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar a pedido</a></div>
+                                <p role="status">Cantidad pedida: @currentCount</p
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#"@onclick="IncrementCount">Agregar a pedido</a></div>
                             </div>
                         </div>
                     </div>
@@ -246,7 +255,8 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar a pedido</a></div>
+                                <p role="status">Cantidad pedida: @currentCount</p
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#"@onclick="IncrementCount">Agregar a pedido</a></div>
                             </div>
                         </div>
                     </div>
@@ -278,5 +288,16 @@
 
     </body>
 
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+   List<productos> 
+
+
+}
 
 <SurveyPrompt Title="How is Blazor working for you?" />
